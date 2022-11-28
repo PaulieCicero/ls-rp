@@ -40,6 +40,7 @@ SYSTÈME DE MAISON :
 SYSTÈME D'ENTREPRISES :
 
 SYSTÈME D'ARMES :
+
 -- DÉGATS DES ARMES :
 
 SYSTÈME DE DROGUES :
@@ -47,6 +48,7 @@ SYSTÈME DE DROGUES :
 SYSTÈME DE VÉHICULES :
 
 SYSTÈME DE JOBS :
+
 -- GÉNÉRAL : Créer un système de caisses pour les jobs ayant un leader.
 -- TAXI : Permettre au gouvernement de /vendrelicencetaxi. L'argent rentre dans la caisse de la faction. Le montant de la licence doit pouvoir être dynamique (gestion par le leader)
 
@@ -55,6 +57,7 @@ SYSTÈME DE VÊTEMENTS :
 SYSTÈME DE TÉLÉPHONE :
 
 SYSTÈME DE FACTIONS LÉGALES :
+
 -- GÉNÉRAL : Créer un système de caisses pour les factions ayant un leader.
 -- GOUVERNEMENT : Créer /vendre
 
@@ -67,6 +70,7 @@ SYSTÈME DE SPORT :
 SYSTÈME DE POUBELLES :
 
 TEXTDRAWS :
+
 -- COMPTEUR VÉHICULE :
 
 SYSTÈME DE PACKS OOC :

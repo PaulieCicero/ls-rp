@@ -2140,12 +2140,12 @@ public OnPlayerConnect(playerid)
 
 public OnPlayerDisconnect(playerid, reason)
 {
-	new str[128], szDisconnectReason[3][10] = {"Timeout", "Leaving", "Kicked"};
+	new str[128], szDisconnectReason[3][10] = {"Timeout", "Déconnexion", "Kick"};
 
 	format(str, sizeof(str), "** %s (%s)", ReturnName(playerid), szDisconnectReason[reason]);
 	ProxDetector(playerid, 20.0, str);
 
- 	format(str, sizeof str, "*** %s Left the server (%s)", ReturnName(playerid), szDisconnectReason[reason]);
+ 	format(str, sizeof str, "*** %s a quitté le serveur (%s).", ReturnName(playerid), szDisconnectReason[reason]);
     ProxJoinServer(playerid, str);
 
 	if(reason == 0) PlayerData[playerid][pTimeout] = gettime();
@@ -2325,7 +2325,7 @@ public OnPlayerWeaponShot(playerid, weaponid, hittype, hitid, Float:fX, Float:fY
 				{
 					if((gettime() - LastTaserUsage[playerid]) < 5)
 					{
-						SendNoticeMessage(playerid, "You must wait 5 seconds until you can tase someone again!");
+						SendNoticeMessage(playerid, "Vous devez attendre 5 secondes avant de taser quelqu'un d'autre.");
 						return 0;
 					}
 
@@ -2781,13 +2781,13 @@ public e_COMMAND_ERRORS:OnPlayerCommandReceived(playerid, cmdtext[], e_COMMAND_E
 {
 	if(success != COMMAND_OK)
 	{
-	    SendClientMessage(playerid, COLOR_WHITE, "{ADC3E7}Error: {FFFFFF}Sorry, that command does not exist. {ADC3E7}/help{FFFFFF} or {ADC3E7}/helpme{FFFFFF} if you're in need of assistance.");
+	    SendClientMessage(playerid, COLOR_WHITE, "{ADC3E7}Erreur: {FFFFFF}Cette commande n'existe pas. {ADC3E7}/help{FFFFFF} ou {ADC3E7}/helpme{FFFFFF} si vous avez besoin d'aide.");
 	    return COMMAND_OK;
 	}
 
     if(PlayerData[playerid][pID] == -1)
 	{
-		SendUnauthMessage(playerid, "You must be logged in prior to use commands.");
+		SendUnauthMessage(playerid, "Vous devez être connecté pour utiliser cette commande.");
 		return COMMAND_DENIED;
 	}
 
@@ -2803,7 +2803,7 @@ public OnPlayerText(playerid, text[])
 {
 	if(PlayerData[playerid][pID] == -1)
 	{
-	    SendUnauthMessage(playerid, "You must be logged in prior to use commands.");
+	    SendUnauthMessage(playerid, "Vous devez être connecté pour utiliser cette commande.");
 	    return false;
 	}
 
@@ -2814,7 +2814,7 @@ public OnPlayerText(playerid, text[])
 	if(Convo{playerid})
 	{
 		if(BlockedPM[ ConvoID[playerid] ][playerid] && PlayerData[playerid][pAdmin] < 1)
-			return SendErrorMessage(playerid, "That player is blocking PMs.");
+			return SendErrorMessage(playerid, "Ce joueur a bloqué ses messages privés.");
 
 		SendPrivateMessage(playerid, ConvoID[playerid], text);
 	}
@@ -2851,21 +2851,21 @@ public OnPlayerText(playerid, text[])
 						    ProxDetector(target, 20.0, str);
 						}
 
-						format(str, sizeof(str), "%s says (phone): %.70s", ReturnName(playerid, 0), text);
+						format(str, sizeof(str), "%s dit (téléphone): %.70s", ReturnName(playerid, 0), text);
 	                   	SendClientMessage(target, COLOR_YELLOW, str);
 
-						format(str, sizeof(str), "%s says (phone): ... %s", ReturnName(playerid, 0), text[70]);
+						format(str, sizeof(str), "%s dit (téléphone): ... %s", ReturnName(playerid, 0), text[70]);
 	                   	SendClientMessage(target, COLOR_YELLOW, str);
 					}
 					else
 					{
 	                    if(ph_speaker{target})
 						{
-						    format(str, sizeof(str), "%s says [Loudspeaker] (phone): %s", ReturnName(playerid, 0), text);
+						    format(str, sizeof(str), "%s dit [Loudspeaker] (phone): %s", ReturnName(playerid, 0), text);
 						    ProxDetector(target, 20.0, str);
 						}
 
-						format(str, sizeof(str), "%s says (phone): %s", ReturnName(playerid, 0), text);
+						format(str, sizeof(str), "%s dit (téléphone): %s", ReturnName(playerid, 0), text);
 	                   	SendClientMessage(target, COLOR_YELLOW, str);
 					}
 				}
@@ -2873,15 +2873,15 @@ public OnPlayerText(playerid, text[])
 
 		    if(strlen(text) > 70)
 		    {
-				format(str, sizeof(str), "%s says (phone): %.70s", ReturnName(playerid, 0), text);
+				format(str, sizeof(str), "%s dit (téléphone): %.70s", ReturnName(playerid, 0), text);
 				ProxDetector(playerid, 20.0, str);
 
-				format(str, sizeof(str), "%s says (phone): ... %s", ReturnName(playerid, 0), text[70]);
+				format(str, sizeof(str), "%s dit (téléphone): ... %s", ReturnName(playerid, 0), text[70]);
 				ProxDetector(playerid, 20.0, str);
 			}
 			else
 			{
-				format(str, sizeof(str), "%s says (phone): %s", ReturnName(playerid, 0), text);
+				format(str, sizeof(str), "%s dit (téléphone): %s", ReturnName(playerid, 0), text);
 				ProxDetector(playerid, 20.0, str);
 			}
 

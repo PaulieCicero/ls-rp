@@ -6147,16 +6147,16 @@ ShowStatistics(playerid, targetid)
 	format(string, sizeof(string),"|____________________%s [%s]____________________|", playerName, currentTime);
 	SendClientMessage(playerid, COLOR_GREEN, string);
 
-	format(string, sizeof(string), "| Character | Faction:[%d][%s] Rank:[%s] Job:[%s] Ph:[%d]", factionid, factionText, rankText, ReturnJobName(targetid, PlayerData[targetid][pJob]), PlayerData[targetid][pPnumber]);
+	format(string, sizeof(string), "| Personnage | Faction: [%d][%s] Rang: [%s] Job: [%s] Tél. :[%d]", factionid, factionText, rankText, ReturnJobName(targetid, PlayerData[targetid][pJob]), PlayerData[targetid][pPnumber]);
 	SendClientMessage(playerid, COLOR_STAT1, string);
 
-	SendClientMessage(playerid, COLOR_STAT2, "| Character | Company:[0][Null] Rank:[Unknown]");
+	SendClientMessage(playerid, COLOR_STAT2, "| Personne | Company:[0][Null] Rank:[Unknown]");
 
-	format(string, sizeof(string), "| Inventory | CarParts:[0] Radio:[%s] Melee:[%s]", (PlayerData[targetid][pRadio]) ? ("Yes") : ("No"), ReturnWeaponName(PlayerData[targetid][pWeapon][0]));
+	format(string, sizeof(string), "| Inventaire | CarParts:[0] Radio:[%s] Melee:[%s]", (PlayerData[targetid][pRadio]) ? ("Yes") : ("No"), ReturnWeaponName(PlayerData[targetid][pWeapon][0]));
 	SendClientMessage(playerid, COLOR_STAT1, string);
 
-	format(string, sizeof(string), "| Weapons | Primary weapon:[%s] Ammo:[%d] Secondary weapon:[%s] Ammo:[%d]", (strlen(primary_weapon)) ? primary_weapon : ("None"), ammo[0], (strlen(secondary_weapon)) ? secondary_weapon : ("None"), ammo[1]);
-	SendClientMessage(playerid, COLOR_STAT2, string);
+	//format(string, sizeof(string), "| Armes | Primary weapon:[%s] Ammo:[%d] Secondary weapon:[%s] Ammo:[%d]", (strlen(primary_weapon)) ? primary_weapon : ("None"), ammo[0], (strlen(secondary_weapon)) ? secondary_weapon : ("None"), ammo[1]); -- INUTILE
+	//SendClientMessage(playerid, COLOR_STAT2, string); -- INUTILE
 
 	format(string, sizeof(string), "| Level | Level:[%d] Experience:[%d/%d] DonatorLevel:[%s]", PlayerData[targetid][pLevel], PlayerData[targetid][pExp], ((PlayerData[targetid][pLevel]) * 4 + 4), ReturnDonateRank(PlayerData[targetid][pDonateRank]));
 	SendClientMessage(playerid, COLOR_STAT1, string);
@@ -6164,7 +6164,7 @@ ShowStatistics(playerid, targetid)
 	format(string, sizeof(string), "| Skill | Health:[%.1f/150.0] Time played:[%d hours]", PlayerData[targetid][pHealth], floatround(PlayerData[targetid][pPlayingSeconds] / 3600, floatround_floor));
 	SendClientMessage(playerid, COLOR_STAT2, string);
 
-	format(string, sizeof(string), "| Money | Cash:[%s] Bank:[%s] Savings:[%s] PayCheck:[%s]", FormatNumber(PlayerData[targetid][pCash]), FormatNumber(PlayerData[targetid][pAccount]), FormatNumber(PlayerData[targetid][pSavingsCollect]), FormatNumber(PlayerData[targetid][pPayCheck]));
+	format(string, sizeof(string), "| Argent | Argent: [%s] Banque: [%s] Savings:[%s] PayCheck:[%s]", FormatNumber(PlayerData[targetid][pCash]), FormatNumber(PlayerData[targetid][pAccount]), FormatNumber(PlayerData[targetid][pSavingsCollect]), FormatNumber(PlayerData[targetid][pPayCheck]));
 	SendClientMessage(playerid, COLOR_STAT1, string);
 
 	format(string, sizeof(string), "| Other | VehicleKey(s):[%s] SideJob:[%s] RentingCar:[%d]", keys, ReturnJobName(playerid, PlayerData[targetid][pSideJob]), RentCarKey[targetid]);
@@ -6306,7 +6306,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 			}
 		}
 
-		SendAdminAlert(COLOR_LIGHTRED, JUNIOR_ADMINS, "[DEATH] %s died (%s).", ReturnName(playerid), ReturnDeathReason(reason));
+		SendAdminAlert(COLOR_LIGHTRED, JUNIOR_ADMINS, "[DEATH] %s est mort (%s).", ReturnName(playerid), ReturnDeathReason(reason));
 		SQL_LogPlayerDeath(playerid, INVALID_PLAYER_ID, reason);
 	}
 
@@ -6351,9 +6351,9 @@ public OnVehicleDeath(vehicleid, killerid)
 			CarData[id][carBatteryL] -= float(10);
 
             if(strlen(CarData[id][carName]) > 0)
-				SendClientMessageEx(killerid, COLOR_LIGHTRED, "Your %s (( %s )) has been destroyed.", CarData[id][carName], ReturnVehicleModelName(CarData[id][carModel]));
+				SendClientMessageEx(killerid, COLOR_LIGHTRED, "Votre véhicule a été détruit (%s - %s).", CarData[id][carName], ReturnVehicleModelName(CarData[id][carModel]));
 			else
-			    SendClientMessageEx(killerid, COLOR_LIGHTRED, "Your %s has been destroyed.", ReturnVehicleModelName(CarData[id][carModel]));
+			    SendClientMessageEx(killerid, COLOR_LIGHTRED, "Votre véhicule a été détruit (%s).", ReturnVehicleModelName(CarData[id][carModel]));
 
 			SendClientMessageEx(killerid, COLOR_LIGHTRED, "LIFESPAN: Engine Health reduced to {FFFFFF}%.2f{FF6347}. Battery Health reduced to {FFFFFF}%.2f{FF6347}.", CarData[id][carEngineL], CarData[id][carBatteryL]);
 
@@ -6567,7 +6567,7 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 		DeletePVar(playerid, "LessonSeconds");
 		DeletePVar(playerid, "InDriveTest");
 
-		SendClientMessage(playerid, COLOR_GREEN, "You have left the vehicle, test failed.");
+		SendClientMessage(playerid, COLOR_GREEN, "Vous avez quitté le véhicule : vous venez de louper votre permis de conduire.");
 
 		DisablePlayerCheckpoint(playerid);
 		gPlayerCheckpointStatus[playerid] = CHECKPOINT_NONE;
@@ -6720,7 +6720,7 @@ public OnPlayerStateChange(playerid, newstate, oldstate)
 		{
 			if(!GetEngineStatus(vehicleid))
 			{
-				SendClientMessage(playerid, COLOR_GREEN, "The engine is off. (/engine)");
+				SendClientMessage(playerid, COLOR_GREEN, "Le moteur est éteint (/engine).");
 			}
 		}
 
@@ -6848,7 +6848,7 @@ public OnPlayerEnterCheckpoint(playerid)
 	{
 	    DisablePlayerCheckpoint(playerid);
 	    HasCheckpoint{playerid} = false;
-	    SendNoticeMessage(playerid, "You have arrived at your destination.");
+	    SendNoticeMessage(playerid, "Vous venez d'arriver à votre destination.");
 	}
 
 	//new string[128];
@@ -8612,7 +8612,7 @@ RefreshTutorial(playerid)
 				TogglePlayerSpectating(playerid, false);
 				TogglePlayerControllable(playerid, false);
 
-				SendClientMessageEx(playerid, COLOR_LIGHTRED, "Welcome to Legacy Roleplay, %s.", ReturnName(playerid, 0));
+				SendClientMessageEx(playerid, COLOR_LIGHTRED, "Bienvenue sur Los Santos Roleplay, %s.", ReturnName(playerid, 0));
 			}
         }
     }
@@ -8689,7 +8689,7 @@ public OnPlayerStreamIn(playerid, forplayerid)
 		{
 			if(DeathMode{playerid})
 			{
-				SetPlayerChatBubble(playerid, "(( THIS PLAYER IS DEAD. ))", 0xFF6347FF, 10.0, 300 * 1000);
+				SetPlayerChatBubble(playerid, "(( LA PERSONNE EST MORTE ))", 0xFF6347FF, 10.0, 300 * 1000);
 			}
 			else
 			{

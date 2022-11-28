@@ -8,22 +8,52 @@ Liste des factions actuelles : police, journaliste, médecin, gouvernement, gang
 
 --- À FAIRE : 
 
-Système d'inventaire.
-Système d'items.
-Système de téléphone (supprimer le fait d'avoir un numéro à la création d'un personnage).
-Système de permis de conduire.
-Système de concessionnaire.
-Système de création d'armes.
-Système de jobs publiques : LSPD, LSFD, Gouvernement...
-Vérifier les différents textdraws (HUD à remettre au goût du jour).
-
-Système de taxi : Permettre au gouvernement de /vendrelicencetaxi. L'argent rentre dans la caisse de la faction. Le montant de la licence doit pouvoir être dynamique (gestion par le leader)
-Système d'ATM : Les atms doivent disposer d'une quantité limitée d'argent. // Qui peut être chargé de les remplir ?
-
+SYSTÈME D'INTRODUCTION AU SERVEUR :
 Revoir l'introduction lors de l'arrivée d'un nouveau joueur + tutoriel.
-Permettre au LSPD de disposer de plusieurs types de barrages routiers + herse.
+
+SYSTÈME DE PAYDAY :
+
+SYSTÈME D'ATM :
+Les atms doivent disposer d'une quantité limitée d'argent. // Qui peut être chargé de les remplir ?
+
+SYSTÈME DE BANQUE :
+
+SYSTÈME D'INVENTAIRE :
+
+SYSTÈME D'ITEMS :
+
+SYSTÈME DE TÉLÉPHONE :
+
+SYSTÈME DE PERMIS DE CONDUIRE :
+
+SYSTÈME DE MAISON :
+
+SYSTÈME D'ENTREPRISES :
+
+SYSTÈME D'ARMES :
+
+SYSTÈME DE DROGUES :
+
+SYSTÈME DE VÉHICULES :
+
+SYSTÈME DE JOBS :
+
+-- TAXI : Permettre au gouvernement de /vendrelicencetaxi. L'argent rentre dans la caisse de la faction. Le montant de la licence doit pouvoir être dynamique (gestion par le leader)
+
+SYSTÈME DE VÊTEMENTS :
+
+SYSTÈME DE TÉLÉPHONE :
+
+SYSTÈME DE FACTIONS LÉGALES :
+
+SYSTÈME DE FACTIONS ILLÉGALES :
+
+SYSTÈME DE MORT :
+
+TEXTDRAWS :
 
 -- UCP :
 
 --- À FAIRE :
+
 Avoir un MDC pour les forces de l'ordre.

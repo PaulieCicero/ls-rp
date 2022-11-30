@@ -97,17 +97,21 @@ Commandes :
 /r : Radio LSPD interne. - Log LSPD
 /d : Radio inter-services. - Log LSPD
 /menotter [ID/PartieDuNom/NumeroInconnu] : Permet de menotter un joueur.
-
+/herse : Déposer une herse au sol et lui attribue un ID. La herse crève les pneus des véhicules.
+/deleteherse [ID] : Supprimer la herse en fonction de son ID.
+/deleteherses : Supprime toutes les herses.
+/listeherses : Liste toutes les herses avec leurs IDs.
+/jgov [message] : Affiche un message à tous les joueurs sur le serveur.
 
 
 
  /tow, /occupants
 /forcer, /b, /bc, /jfreq, /megaphone, /juger, /dp, /vehiculedesc, /traceur
-/detruire, /meec (/miseecoute), /bdd, /occupation, /jgov
+/detruire, /meec (/miseecoute), /bdd, /occupation
 /dashcam, /dashcamoff, /listevehlspd, /camera, /cameraoff, /taser, /beanbag, /com, /fermercom
 /affaires, /enquete, /classerenquete, /checkbalistique, /barrage, /retirerbarrage, /armurerie
 /listegav, /wanted, /checkwanted, /retirerwanted, /prendregilet, /chargeur, /donut
-/herse, /deleteherse, /noflash, /retirerherseall, /micro
+ /noflash, /micro
 
 SYSTÈME DE FACTIONS ILLÉGALES :
 

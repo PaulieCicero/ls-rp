@@ -86,18 +86,32 @@ Toutes les factions légales peuvent recruter, licencier, changer de rang, chang
 -- MAIRIE :
 
 -- LSPD (POSTE 1) et (POSTE 2) - comme sur CMLV, 2 postes séparés : 
+
 Commandes : 
+
 /jmembres : Affiche le Prénom, le nom, le nom du rang et le message lié à /occupation.
+
 /skin : Permet de mettre son skin si l'on est en /duty.
-/amende [ID/PartieDuNom/NumeroInconnu] [prix] [motif] : Permet de mettre une amende à un joueur. Il est possible pour le joueur de ne pas payer immédiatement. - Log LSPD
+
+/amende [ID/PartieDuNom/NumeroInconnu] [prix] [motif] : Permet de mettre une amende à un joueur. Il est possible pour 
+le joueur de ne pas payer immédiatement. - Log LSPD
+
 /retirerpermis [ID/PartieDuNom/NumeroInconnu] [motif] : Permet de retirer le permis d'un joueur. - Log LSPD
+
 /r : Radio LSPD interne. - Log LSPD
+
 /d : Radio inter-services. - Log LSPD
+
 /menotter [ID/PartieDuNom/NumeroInconnu] : Permet de menotter un joueur.
+
 /herse : Déposer une herse au sol et lui attribue un ID. La herse crève les pneus des véhicules.
+
 /deleteherse [ID] : Supprimer la herse en fonction de son ID.
+
 /deleteherses : Supprime toutes les herses.
+
 /listeherses : Liste toutes les herses avec leurs IDs.
+
 /jgov [message] : Affiche un message à tous les joueurs sur le serveur.
 
  /tow, /occupants

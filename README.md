@@ -7,15 +7,20 @@ https://forum.gta-chronicles.com/index.php?forums/dev-features/
 
 Revoir l'introduction lors de l'arrivée d'un nouveau joueur + tutoriel.
 
-## **SYSTÈME ÉCONOMIQUE DU SERVEUR :**
-
 ## **SYSTÈME DE PANNEAUX PUBLICITAIRES :**
+
+https://nsa40.casimages.com/img/2019/03/21/190321070033239051.png
+
+Les panneaux publicitaires sont gérés par les journalistes de la Ville.
+
+Chaque panneau publicitaire est identifié par son ID.
 
 ## **SYSTÈME DE PAYDAY :**
 
 ## **SYSTÈME D'ATM :**
 
-Les atms doivent disposer d'une quantité limitée d'argent. // Qui peut être chargé de les remplir ?
+**Éléments généraux :**
+Les ATMs doivent être suffisamment nombreux en Ville et doivent être placés à des endroits stratégiques. Ils disposent d'une quantité limitée d'argent et sont réapprovisionnés par l'entreprise "banque". Dès lors qu'un ATM dispose d'une somme inférieure à 5,000$, une notification est envoyée au leader (LOG LEADER BANQUE) - par le biais de l'UCP ?
 
 ## **SYSTÈME DE BANQUE :**
 
@@ -130,8 +135,8 @@ Fermier
 | /bracelet [ID/PartieDuNom/NumeroInconnu] [motif]  |  Permet de mettre un bracelet électronique à un joueur. |  Log LSPD |
 | /listebracelets :  | Permet d'afficher les joueurs connectés (Prénom, Nom, ID du joueur) qui ont un bracelet électronique ainsi que le motif.  | |
 |  /localiserbracelet [ID du joueur] | Permet de localiser un joueur qui a un bracelet électronique en fonction de son ID.  | Ne fonctionne que pour les joueurs qui ont un bracelet électronique. |
-|  /forcerporte | Force la porte d'entrée du commerce/de la maison.  | |
-|  /baliseurg | Lance une balise d'urgence.  | Un message est envoyé à la radio interne. La localisation du joueur est affiché en temps réel.|
+|  /forcerporte | Force la porte d'entrée du commerce/de la maison.  | Log LSPD  |
+|  /baliseurg | Lance une balise d'urgence.  | Un message est envoyé à la radio interne. La localisation du joueur est affiché en temps réel. / Log LSPD |
 |  /stopbaliseurg | Désactive la balise d'urgence.  | |
 
  /jfreq, /vehiculedesc, /traceur, /detruire, /meec (/miseecoute), /bdd, /dashcam, /dashcamoff, /listevehlspd, /camera, /cameraoff, /taser, /beanbag, /affaires, /enquete, /classerenquete, /checkbalistique,, /listegav, /wanted, /checkwanted, /retirerwanted, /prendregilet, /chargeur, /noflash, /micro
@@ -152,6 +157,13 @@ Fermier
 
 ## SYSTÈME DE POUBELLES :
 
+**Éléments généraux :**
+Il existe deux types de poubelles : les poubelles publiques et les poubelles privées.
+
+- Poubelles publiques : Les poubelles publiques sont installées dans l'ensemble de la Ville. Le ramassage d'une poubelle publique (uniquement si elle est remplie à plus de xxxxx %) coûte xxxx $ à la caisse mairie.
+- Poubelles privées : Chaque maison et commerce dispose d'une poubelle. Le ramassage d'une poubelle privée (uniquement si elle est remplie à plus de xxxxx %) coûte xxxx $ au propriétaire (retiré sur son compte en banque).
+
+
 ## SYSTÈME DE BRAQUAGES :
 
 ## SYSTÈME DE GARAGES :
@@ -164,10 +176,13 @@ Fermier
 
 + Pack véhicules : Permet d'acheter 2 véhicules supplémentaires (voiture/moto/bateau/avion).
 + Pack maison : Permet d'acheter 1 maison supplémentaire.
++ Pack skin : Permet d'acheter 1 skin personnalisé.
 
 # MAPPINGS : 
 
 Liste des lieux :
+
+# ÉCONOMIE GLOBALE :
 
 # UCP :
 

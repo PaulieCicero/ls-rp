@@ -38,6 +38,19 @@ Les ATMs doivent être suffisamment nombreux en Ville et doivent être placés �
 
 Chaque joueur peut disposer de 2 maisons.
 
+## SYSTÈME D'ARMES :
+
+### DÉGATS DES ARMES :
+
+## SYSTÈME DE DROGUES :
+
+## SYSTÈME DE VÉHICULES :
+Dès lors d'un véhicule est en très mauvais état, il est impossible de la démarrer et il est nécessaire de faire appel à un mécanicien. (Permettre à un admin de réparer le véhicule)
+
+Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau/avion)
+
+2 concessionnaires maximum dans la ville (= sous forme de business) : le concessionnaire achète les véhicules à un tarif fixé dans le script ; il peut les revendre au prix qu'il le souhaite.
+
 ## **SYSTÈME D'ENTREPRISES :**
 
 Toutes les entreprises peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse job), affecter des véhicules à l'entreprise, changer le skin en fonction du rang.
@@ -55,25 +68,18 @@ L'essence doit être transporté par un camionneur jusqu'à la station essence.
 L'essence est acheté à prix fixe par l'entreprise.
 L'entreprise peut fixer un prix de vente.
 
-## SYSTÈME D'ARMES :
-
-### DÉGATS DES ARMES :
-
-## SYSTÈME DE DROGUES :
-
-## SYSTÈME DE VÉHICULES :
-Dès lors d'un véhicule est en très mauvais état, il est impossible de la démarrer et il est nécessaire de faire appel à un mécanicien. (Permettre à un admin de réparer le véhicule)
-
-Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau/avion)
-
-2 concessionnaires maximum dans la ville (= sous forme de business) : le concessionnaire achète les véhicules à un tarif fixé dans le script ; il peut les revendre au prix qu'il le souhaite.
-
 ## SYSTÈME DE JOBS :
-Fermier
 
--- GÉNÉRAL : Créer un système de caisses pour les jobs ayant un leader.
+**Éléments généraux :** 
+Il existe deux types de jobs.
 
--- TAXI : Permettre au gouvernement de /vendrelicencetaxi. L'argent rentre dans la caisse de la faction. Le montant de la licence doit pouvoir être dynamique (gestion par le leader)
+1. Jobs autonomes : Les jobs autonomes permettent de trouver rapidement un travail et de le réaliser en toute autonomie.
+2. Jobs non autonomes : Les jobs non autonomes sont les jobs qui nécessitent d'être en interaction avec d'autres joueurs.
+
+**Liste des jobs :** 
+
+1. Jobs autonomes : Fermier, 
+2. Jobs non autonomes : 24/7, armurerie, station-essence, concessionnaire, banque, taxi, location de voitures/motos, location de bateaux, location d'avions, mécanicien, camionneur, éboueur, presse.
 
 ## SYSTÈME DE VÊTEMENTS :
 

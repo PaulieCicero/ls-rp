@@ -78,13 +78,13 @@ Fermier
 
 **Éléments généraux :** Toutes les factions légales peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse faction légale), affecter des véhicules à l'entreprise, changer le skin en fonction du rang. Toutes les amendes iront dans la caisse de la mairie.
 
-** Liste des factions : LSCH, LSPD, LSFD, LSSD, FBI, DOJ **
+**Liste des factions : LSCH, LSPD, LSFD, LSSD, FBI, DOJ**
 
 ### Los Santos City Hall (Mairie) :
 
 ### Los Santos Police Department :
 
-**Éléments généraux : ** Créer deux factions distinctes (cf CMLV) avec deux postes différents.
+**Éléments généraux :** Créer deux factions distinctes (cf CMLV) avec deux postes différents.
 
 #### LISTE DES COMMANDES : 
 

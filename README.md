@@ -52,6 +52,11 @@ SYSTÈME D'ARMES :
 SYSTÈME DE DROGUES :
 
 SYSTÈME DE VÉHICULES :
+Dès lors d'un véhicule est en très mauvais état, il est impossible de la démarrer et il est nécessaire de faire appel à un mécanicien. (Permettre à un admin de réparer le véhicule)
+
+Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau)
+
+2 concessionnaires maximum dans la ville (= sous forme de business) : le concessionnaire achète les véhicules à un tarif fixé dans le script ; il peut les revendre au prix qu'il le souhaite.
 
 SYSTÈME DE JOBS :
 
@@ -69,6 +74,8 @@ SYSTÈME DE FACTIONS LÉGALES :
 
 -- GOUVERNEMENT : Créer /vendre
 
+-- LSPD : 
+
 SYSTÈME DE FACTIONS ILLÉGALES :
 
 SYSTÈME DE MORT :
@@ -76,6 +83,8 @@ SYSTÈME DE MORT :
 SYSTÈME DE SPORT :
 
 SYSTÈME DE POUBELLES :
+
+SYSTÈME DE BRAQUAGES :
 
 TEXTDRAWS :
 

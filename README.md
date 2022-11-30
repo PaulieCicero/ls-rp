@@ -93,33 +93,60 @@ Commandes :
 
 /skin : Permet de mettre son skin si l'on est en /duty.
 
-/amende [ID/PartieDuNom/NumeroInconnu] [prix] [motif] : Permet de mettre une amende à un joueur. Il est possible pour 
+/amendej [ID/PartieDuNom/NumeroInconnu] [prix] [motif] : Permet de mettre une amende à un joueur. Il est possible pour 
 le joueur de ne pas payer immédiatement. - Log LSPD
 
 /retirerpermis [ID/PartieDuNom/NumeroInconnu] [motif] : Permet de retirer le permis d'un joueur. - Log LSPD
 
 /r : Radio LSPD interne. - Log LSPD
 
-/d : Radio inter-services. - Log LSPD
+/d : Radio inter-services (LSPD+LSSD+FBI+LSFD+PROCUREUR+COUR). - Log LSPD
 
 /menotter [ID/PartieDuNom/NumeroInconnu] : Permet de menotter un joueur.
 
 /herse : Déposer une herse au sol et lui attribue un ID. La herse crève les pneus des véhicules.
 
-/deleteherse [ID] : Supprimer la herse en fonction de son ID.
+/retirerherse [ID] : Supprimer la herse en fonction de son ID.
 
-/deleteherses : Supprime toutes les herses.
+/retirerherses : Supprime toutes les herses.
 
 /listeherses : Liste toutes les herses avec leurs IDs.
 
-/jgov [message] : Affiche un message à tous les joueurs sur le serveur.
+/jgov [message] : Affiche un message à tous les joueurs sur le serveur. LOG LSPD.
 
- /tow, /occupants
-/forcer, /b, /bc, /jfreq, /megaphone, /juger, /dp, /vehiculedesc, /traceur
-/detruire, /meec (/miseecoute), /bdd, /occupation
-/dashcam, /dashcamoff, /listevehlspd, /camera, /cameraoff, /taser, /beanbag, /com, /fermercom
-/affaires, /enquete, /classerenquete, /checkbalistique, /barrage, /retirerbarrage, /armurerie
-/listegav, /wanted, /checkwanted, /retirerwanted, /prendregilet, /chargeur, /donut
+/megaphone [message] : Affiche un message dans un périmètre élargi.
+
+/equipement : Affiche une liste d'armes et de gilets (léger/lourd) qu'il est possible de prendre. Les armes sont en quantité limitée. Elles doivent être livrées par les camionneurs. LOG LSPD à chaque retrait d'arme.
+
+/barrage [id du barrage] : Déposer un barrage et lui attribue un ID.
+
+/retirerbarrage [ID] : Supprimer le barrage en fonction de son ID.
+
+/retirerbarrages : Supprimer tous les barrages.
+
+/listebarrages : Liste tous les barrages avec leurs IDs.
+
+/mettresabot : Déposer un sabot sur le véhicule à côté du joueur.
+
+/retirersabot : Retirer le sabot sur le véhicule à côté du joueur.
+
+/amendev [ID du véhicule] [prix] [motif] : Permet de mettre une amende à un véhicule. Il est possible pour 
+le joueur de ne pas payer immédiatement. - Log LSPD
+
+/juger [ID/PartieDuNom/NumeroInconnu] [peine (minutes)] [amende] : Permet de mettre un joueur en prison.
+
+/dp [ID/PartieDuNom/NumeroInconnu] : Permet de mettre un joueur en détention provisoire.
+
+/bracelet [ID/PartieDuNom/NumeroInconnu] : Permet de mettre un bracelet électronique à un joueur.
+
+
+
+
+/forcer, /b, /bc, /jfreq, /dp, /vehiculedesc, /traceur
+/detruire, /meec (/miseecoute), /bdd
+/dashcam, /dashcamoff, /listevehlspd, /camera, /cameraoff, /taser, /beanbag
+/affaires, /enquete, /classerenquete, /checkbalistique,
+/listegav, /wanted, /checkwanted, /retirerwanted, /prendregilet, /chargeur
  /noflash, /micro
 
  -- LSFD :
@@ -141,6 +168,8 @@ SYSTÈME DE SPORT :
 SYSTÈME DE POUBELLES :
 
 SYSTÈME DE BRAQUAGES :
+
+SYSTÈME DE GARAGES :
 
 TEXTDRAWS :
 

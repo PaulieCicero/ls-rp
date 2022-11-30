@@ -15,6 +15,21 @@ Reproduire l'introduction du jeu solo :
 4. Emmener le joueur vers la sortie de l'aéroport
 5. Visite des principaux lieux de la Ville avec un bot taxi (obligatoire)
 
+## **SYSTÈME DE COMMANDES (AUTRES QUE CELLES DÉCRITES PLUS BAS) :**
+
+| Commande  | Description  | Commentaire  |
+| ------------ | ------------ | ------------ |
+| /aide  | /propriete aide ; /voiture aide ; /entreprise aide ; /factionl aide ; /factioni aide ; /banque aide ; /job aide ; /telephone aide ; /garage aide  |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+
+
 ## **SYSTÈME DE PANNEAUX PUBLICITAIRES :**
 
 https://nsa40.casimages.com/img/2019/03/21/190321070033239051.png

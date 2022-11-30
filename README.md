@@ -1,46 +1,39 @@
 
 https://forum.gta-chronicles.com/index.php?forums/dev-features/
 
--- GAMEMODE :
+# GAMEMODE :
 
---- INFORMATIONS :
-
---- TRADUCTIONS À RÉALISER :
-
-roleplay.pwn : Cicero
-
---- À FAIRE : 
-
-SYSTÈME D'INTRODUCTION AU SERVEUR :
+## **SYSTÈME D'INTRODUCTION AU SERVEUR :**
 
 Revoir l'introduction lors de l'arrivée d'un nouveau joueur + tutoriel.
 
-SYSTÈME ÉCONOMIQUE DU SERVEUR :
+## **SYSTÈME ÉCONOMIQUE DU SERVEUR :**
 
-SYSTÈME DE PANNEAUX PUBLICITAIRES :
+## **SYSTÈME DE PANNEAUX PUBLICITAIRES :**
 
-SYSTÈME DE PAYDAY :
+## **SYSTÈME DE PAYDAY :**
 
-SYSTÈME D'ATM :
+## **SYSTÈME D'ATM :**
 
 Les atms doivent disposer d'une quantité limitée d'argent. // Qui peut être chargé de les remplir ?
 
-SYSTÈME DE BANQUE :
+## **SYSTÈME DE BANQUE :**
 
-SYSTÈME D'INVENTAIRE :
+## **SYSTÈME D'INVENTAIRE :**
 
-SYSTÈME D'ITEMS :
+**SYSTÈME D'ITEMS :**
 
-SYSTÈME DE TÉLÉPHONE :
+**SYSTÈME DE TÉLÉPHONE :**
 
--- CABINES TÉLÉPHONIQUES :
+**SYSTÈME DE CABINES TÉLÉPHONIQUES :**
 
-SYSTÈME DE PERMIS DE CONDUIRE :
+**SYSTÈME DE PERMIS DE CONDUIRE (AUTO, AVION) :**
 
-SYSTÈME DE MAISON :
+**SYSTÈME DE MAISON :**
+
 Chaque joueur peut disposer de 2 maisons.
 
-SYSTÈME D'ENTREPRISES :
+**SYSTÈME D'ENTREPRISES :**
 
 Toutes les entreprises peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse job), affecter des véhicules à l'entreprise, changer le skin en fonction du rang.
 
@@ -139,10 +132,17 @@ le joueur de ne pas payer immédiatement. - Log LSPD
 
 /bracelet [ID/PartieDuNom/NumeroInconnu] : Permet de mettre un bracelet électronique à un joueur.
 
+/listebracelets : Permet d'afficher les joueurs connectés (Prénom, Nom, ID du joueur) qui ont un bracelet électronique.
 
+/localiserbracelet [ID du joueur] : Permet de localiser un joueur qui a un bracelet électronique en fonction de son ID. Ne fonctionne que pour les joueurs qui ont un bracelet électronique.
 
+/forcerporte : Force la porte d'entrée du commerce/de la maison.
 
-/forcer, /b, /bc, /jfreq, /dp, /vehiculedesc, /traceur
+/baliseurg : Lance une balise d'urgence. Un message est envoyé à la radio interne. La localisation du joueur est affiché en temps réel.
+
+/stopbaliseurg : Désactive la balise d'urgence.
+
+/b, /bc, /jfreq, /dp, /vehiculedesc, /traceur
 /detruire, /meec (/miseecoute), /bdd
 /dashcam, /dashcamoff, /listevehlspd, /camera, /cameraoff, /taser, /beanbag
 /affaires, /enquete, /classerenquete, /checkbalistique,
@@ -186,3 +186,4 @@ SYSTÈME DE PACKS OOC :
 --- À FAIRE :
 
 Avoir un MDC pour les forces de l'ordre.
+

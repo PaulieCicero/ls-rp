@@ -42,10 +42,11 @@ SYSTÈME DE TÉLÉPHONE :
 SYSTÈME DE PERMIS DE CONDUIRE :
 
 SYSTÈME DE MAISON :
+Chaque joueur peut disposer de 2 maisons.
 
 SYSTÈME D'ENTREPRISES :
 
-Toutes les entreprises peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse job), affecter des véhicules à l'entreprise.
+Toutes les entreprises peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse job), affecter des véhicules à l'entreprise, changer le skin en fonction du rang.
 
 Liste des entreprises : 24/7, armurerie, station-essence, concessionnaire, banque, taxi, location de voitures/motos, location de bateaux, location d'avions, mécanicien, camionneur, éboueur, presse.
 
@@ -68,7 +69,7 @@ SYSTÈME DE DROGUES :
 SYSTÈME DE VÉHICULES :
 Dès lors d'un véhicule est en très mauvais état, il est impossible de la démarrer et il est nécessaire de faire appel à un mécanicien. (Permettre à un admin de réparer le véhicule)
 
-Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau)
+Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau/avion)
 
 2 concessionnaires maximum dans la ville (= sous forme de business) : le concessionnaire achète les véhicules à un tarif fixé dans le script ; il peut les revendre au prix qu'il le souhaite.
 
@@ -83,12 +84,30 @@ SYSTÈME DE VÊTEMENTS :
 SYSTÈME DE TÉLÉPHONE :
 
 SYSTÈME DE FACTIONS LÉGALES :
-
--- GÉNÉRAL : Créer un système de caisses pour les factions ayant un leader.
+Toutes les factions légales peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse faction légale), affecter des véhicules à l'entreprise, changer le skin en fonction du rang. Toutes les amendes iront dans la caisse de la mairie.
 
 -- GOUVERNEMENT : Créer /vendre
 
 -- LSPD : 
+Commandes : 
+/jmembres : Affiche le Prénom, le nom, le nom du rang et le message lié à /occupation.
+/skin : Permet de mettre son skin si l'on est en /duty.
+/amende [ID/PartieDuNom/NumeroInconnu] [prix] [motif] : Permet de mettre une amende à un joueur. Il est possible pour le joueur de ne pas payer immédiatement. - Log LSPD
+/retirerpermis [ID/PartieDuNom/NumeroInconnu] [motif] : Permet de retirer le permis d'un joueur. - Log LSPD
+/r : Radio LSPD interne. - Log LSPD
+/d : Radio inter-services. - Log LSPD
+/menotter [ID/PartieDuNom/NumeroInconnu] : Permet de menotter un joueur.
+
+
+
+
+ /tow, /occupants
+/forcer, /b, /bc, /jfreq, /megaphone, /juger, /dp, /vehiculedesc, /traceur
+/detruire, /meec (/miseecoute), /bdd, /occupation, /jgov
+/dashcam, /dashcamoff, /listevehlspd, /camera, /cameraoff, /taser, /beanbag, /com, /fermercom
+/affaires, /enquete, /classerenquete, /checkbalistique, /barrage, /retirerbarrage, /armurerie
+/listegav, /wanted, /checkwanted, /retirerwanted, /prendregilet, /chargeur, /donut
+/herse, /deleteherse, /noflash, /retirerherseall, /micro
 
 SYSTÈME DE FACTIONS ILLÉGALES :
 
@@ -104,7 +123,11 @@ TEXTDRAWS :
 
 -- COMPTEUR VÉHICULE :
 
+MAPPINGS : Tout le serveur en openword.
+
 SYSTÈME DE PACKS OOC :
++ 2 véhicules (voiture/moto/bateau/avion) en +.
++ 1 maison en +.
 
 -- UCP :
 

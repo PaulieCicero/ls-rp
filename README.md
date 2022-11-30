@@ -75,13 +75,16 @@ Fermier
 ## SYSTÈME DE TÉLÉPHONE :
 
 ## SYSTÈME DE FACTIONS LÉGALES :
-Toutes les factions légales peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse faction légale), affecter des véhicules à l'entreprise, changer le skin en fonction du rang. Toutes les amendes iront dans la caisse de la mairie.
 
-### MAIRIE :
+**Éléments généraux :** Toutes les factions légales peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse faction légale), affecter des véhicules à l'entreprise, changer le skin en fonction du rang. Toutes les amendes iront dans la caisse de la mairie.
 
-### LSPD :
+** Liste des factions : LSCH, LSPD, LSFD, LSSD, FBI, DOJ **
 
-(POSTE 1) et (POSTE 2) - comme sur CMLV, 2 postes séparés : 
+### Los Santos City Hall (Mairie) :
+
+### Los Santos Police Department :
+
+**Éléments généraux : ** Créer deux factions distinctes (cf CMLV) avec deux postes différents.
 
 #### LISTE DES COMMANDES : 
 
@@ -92,107 +95,67 @@ Toutes les factions légales peuvent recruter, licencier, changer de rang, chang
 | /amendej  [ID/PartieDuNom/NumeroInconnu] [prix] [motif] |  Permet de mettre une amende à un joueur. Il est possible pour le joueur de ne pas payer immédiatement. | Log LSPD | 
 | /retirerpermis [ID/PartieDuNom/NumeroInconnu] [type de permis]  [motif]  | Permet de retirer le permis d'un joueur.  | Log LSPD
 | /r  | Radio LSPD interne.  | Log LSPD |
-|   |   | |
-|   |   | |
-|   |   | |
-|   |   | |
-|   |   | |
-|   |   | |
+| /d   |  Radio inter-services (toutes les factions légales) | Log LSPD |
+|  /menotter [ID/PartieDuNom/NumeroInconnu] | Permet de menotter un joueur.  | |
+|  /herse | Déposer une herse au sol et lui attribue un ID. La herse crève les pneus des véhicules.  | |
+|  /retirerherse [ID] | Supprimer la herse en fonction de son ID.  | |
+|  /retirerherses | Supprime toutes les herses.  | |
+| /listeherses  |  Liste toutes les herses avec leurs IDs. | |
+|  /jgov [message] | Affiche un message à tous les joueurs sur le serveur.  | Log LSPD |
+|  /megaphone [message] | Affiche un message dans un périmètre élargi.  | |
+|  /equipement | Affiche une liste d'armes et de gilets (léger/lourd) qu'il est possible de prendre.   | Les armes sont en quantité limitée. Elles doivent être livrées par les camionneurs. LOG LSPD à chaque retrait d'arme.|
+| /barrage [id du barrage]  |  Déposer un barrage et lui attribue un ID. | |
+|  /retirerbarrage [ID] | Supprimer le barrage en fonction de son ID.  | |
+|  /retirerbarrages |  Supprimer tous les barrages. | |
+| /listebarrages  |  Liste tous les barrages avec leurs IDs. | |
+|  /mettresabot [motif] |  Déposer un sabot sur le véhicule à côté du joueur. | Log LSPD |
+| /retirersabot |  Retirer le sabot sur le véhicule à côté du joueur. | Log LSPD |
+| /amendev [ID du véhicule] [prix] [motif]  |  Permet de mettre une amende à un véhicule. Il est possible pour le joueur de ne pas payer immédiatement. | Log LSPD|
+|  /juger [ID/PartieDuNom/NumeroInconnu] [peine (minutes)] [amende] [liste infractions] | Permet de mettre un joueur en prison.  | Log LSPD |
+|  /dp [ID/PartieDuNom/NumeroInconnu] | Permet de mettre un joueur en détention provisoire.  |  Log LSPD |
+| /bracelet [ID/PartieDuNom/NumeroInconnu] [motif]  |  Permet de mettre un bracelet électronique à un joueur. |  Log LSPD |
+| /listebracelets :  | Permet d'afficher les joueurs connectés (Prénom, Nom, ID du joueur) qui ont un bracelet électronique ainsi que le motif.  | |
+|  /localiserbracelet [ID du joueur] | Permet de localiser un joueur qui a un bracelet électronique en fonction de son ID.  | Ne fonctionne que pour les joueurs qui ont un bracelet électronique. |
+|  /forcerporte | Force la porte d'entrée du commerce/de la maison.  | |
+|  /baliseurg | Lance une balise d'urgence.  | Un message est envoyé à la radio interne. La localisation du joueur est affiché en temps réel.|
+|  /stopbaliseurg | Désactive la balise d'urgence.  | |
 
+ /jfreq, /vehiculedesc, /traceur, /detruire, /meec (/miseecoute), /bdd, /dashcam, /dashcamoff, /listevehlspd, /camera, /cameraoff, /taser, /beanbag, /affaires, /enquete, /classerenquete, /checkbalistique,, /listegav, /wanted, /checkwanted, /retirerwanted, /prendregilet, /chargeur, /noflash, /micro
 
-/r : Radio LSPD interne. - Log LSPD
+### Los Santos Fire Department : 
 
-/d : Radio inter-services (LSPD+LSSD+FBI+LSFD+PROCUREUR+COUR). - Log LSPD
+### Los Santos Sheriff Department :
 
-/menotter [ID/PartieDuNom/NumeroInconnu] : Permet de menotter un joueur.
+### Federal Bureau of Investigation :
 
-/herse : Déposer une herse au sol et lui attribue un ID. La herse crève les pneus des véhicules.
+### Department of Justice :
 
-/retirerherse [ID] : Supprimer la herse en fonction de son ID.
+## SYSTÈME DE FACTIONS ILLÉGALES :
 
-/retirerherses : Supprime toutes les herses.
+## SYSTÈME DE MORT :
 
-/listeherses : Liste toutes les herses avec leurs IDs.
+## SYSTÈME DE SPORT :
 
-/jgov [message] : Affiche un message à tous les joueurs sur le serveur. LOG LSPD.
+## SYSTÈME DE POUBELLES :
 
-/megaphone [message] : Affiche un message dans un périmètre élargi.
+## SYSTÈME DE BRAQUAGES :
 
-/equipement : Affiche une liste d'armes et de gilets (léger/lourd) qu'il est possible de prendre. Les armes sont en quantité limitée. Elles doivent être livrées par les camionneurs. LOG LSPD à chaque retrait d'arme.
+## SYSTÈME DE GARAGES :
 
-/barrage [id du barrage] : Déposer un barrage et lui attribue un ID.
+## TEXTDRAWS :
 
-/retirerbarrage [ID] : Supprimer le barrage en fonction de son ID.
+### COMPTEUR VÉHICULE :
 
-/retirerbarrages : Supprimer tous les barrages.
+## SYSTÈME DE PACKS OOC :
 
-/listebarrages : Liste tous les barrages avec leurs IDs.
++ Pack véhicules : Permet d'acheter 2 véhicules supplémentaires (voiture/moto/bateau/avion).
++ Pack maison : Permet d'acheter 1 maison supplémentaire.
 
-/mettresabot : Déposer un sabot sur le véhicule à côté du joueur.
+# MAPPINGS : 
 
-/retirersabot : Retirer le sabot sur le véhicule à côté du joueur.
+Liste des lieux :
 
-/amendev [ID du véhicule] [prix] [motif] : Permet de mettre une amende à un véhicule. Il est possible pour 
-le joueur de ne pas payer immédiatement. - Log LSPD
-
-/juger [ID/PartieDuNom/NumeroInconnu] [peine (minutes)] [amende] : Permet de mettre un joueur en prison.
-
-/dp [ID/PartieDuNom/NumeroInconnu] : Permet de mettre un joueur en détention provisoire.
-
-/bracelet [ID/PartieDuNom/NumeroInconnu] : Permet de mettre un bracelet électronique à un joueur.
-
-/listebracelets : Permet d'afficher les joueurs connectés (Prénom, Nom, ID du joueur) qui ont un bracelet électronique.
-
-/localiserbracelet [ID du joueur] : Permet de localiser un joueur qui a un bracelet électronique en fonction de son ID. Ne fonctionne que pour les joueurs qui ont un bracelet électronique.
-
-/forcerporte : Force la porte d'entrée du commerce/de la maison.
-
-/baliseurg : Lance une balise d'urgence. Un message est envoyé à la radio interne. La localisation du joueur est affiché en temps réel.
-
-/stopbaliseurg : Désactive la balise d'urgence.
-
-/b, /bc, /jfreq, /dp, /vehiculedesc, /traceur
-/detruire, /meec (/miseecoute), /bdd
-/dashcam, /dashcamoff, /listevehlspd, /camera, /cameraoff, /taser, /beanbag
-/affaires, /enquete, /classerenquete, /checkbalistique,
-/listegav, /wanted, /checkwanted, /retirerwanted, /prendregilet, /chargeur
- /noflash, /micro
-
- -- LSFD :
-
- -- LSSD :
-
- -- FBI :
-
- -- BUREAU DU PROCUREUR :
-
- -- COUR DE JUSTICE :
-
-SYSTÈME DE FACTIONS ILLÉGALES :
-
-SYSTÈME DE MORT :
-
-SYSTÈME DE SPORT :
-
-SYSTÈME DE POUBELLES :
-
-SYSTÈME DE BRAQUAGES :
-
-SYSTÈME DE GARAGES :
-
-TEXTDRAWS :
-
--- COMPTEUR VÉHICULE :
-
-MAPPINGS : Tout le serveur en openword.
-
-SYSTÈME DE PACKS OOC :
-+ 2 véhicules (voiture/moto/bateau/avion) en +.
-+ 1 maison en +.
-
--- UCP :
-
---- À FAIRE :
+# UCP :
 
 Avoir un MDC pour les forces de l'ordre.
 

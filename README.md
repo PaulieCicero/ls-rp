@@ -21,75 +21,84 @@ Les atms doivent disposer d'une quantité limitée d'argent. // Qui peut être c
 
 ## **SYSTÈME D'INVENTAIRE :**
 
-**SYSTÈME D'ITEMS :**
+## **SYSTÈME D'ITEMS :**
 
-**SYSTÈME DE TÉLÉPHONE :**
+## **SYSTÈME DE TÉLÉPHONE :**
 
-**SYSTÈME DE CABINES TÉLÉPHONIQUES :**
+## **SYSTÈME DE CABINES TÉLÉPHONIQUES :**
 
-**SYSTÈME DE PERMIS DE CONDUIRE (AUTO, AVION) :**
+## **SYSTÈME DE PERMIS DE CONDUIRE (AUTO, AVION) :**
 
-**SYSTÈME DE MAISON :**
+## **SYSTÈME DE MAISON :**
 
 Chaque joueur peut disposer de 2 maisons.
 
-**SYSTÈME D'ENTREPRISES :**
+## **SYSTÈME D'ENTREPRISES :**
 
 Toutes les entreprises peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse job), affecter des véhicules à l'entreprise, changer le skin en fonction du rang.
 
-Liste des entreprises : 24/7, armurerie, station-essence, concessionnaire, banque, taxi, location de voitures/motos, location de bateaux, location d'avions, mécanicien, camionneur, éboueur, presse.
+Liste des entreprises : 24/7 (1), armurerie, station-essence (3), concessionnaire, banque, taxi, location de voitures/motos, location de bateaux, location d'avions, mécanicien, camionneur, éboueur, presse.
 
---- SYSTÈME DE VENTE :
+- ### SYSTÈME DE VENTE :
+
 Toutes les entreprises ayant un système de vente (24/7, armurerie, etc.) peuvent :
-- Soit acheter un "actor" afin que l'entreprise tourne 24h/24 (définir un mode de financement)
-- Soit recruter un joueur afin de jouer le rp vendeur (définir des avantages par rapport à l'actor)
+Soit acheter un "actor" afin que l'entreprise tourne 24h/24 (définir un mode de financement)
+Soit recruter un joueur afin de jouer le rp vendeur (définir des avantages par rapport à l'actor)
 
---- STATION-ESSENCE :
+- ### 3. STATION-ESSENCE :
 L'essence doit être transporté par un camionneur jusqu'à la station essence.
 L'essence est acheté à prix fixe par l'entreprise.
 L'entreprise peut fixer un prix de vente.
 
-SYSTÈME D'ARMES :
+## SYSTÈME D'ARMES :
 
--- DÉGATS DES ARMES :
+### DÉGATS DES ARMES :
 
-SYSTÈME DE DROGUES :
+## SYSTÈME DE DROGUES :
 
-SYSTÈME DE VÉHICULES :
+## SYSTÈME DE VÉHICULES :
 Dès lors d'un véhicule est en très mauvais état, il est impossible de la démarrer et il est nécessaire de faire appel à un mécanicien. (Permettre à un admin de réparer le véhicule)
 
 Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau/avion)
 
 2 concessionnaires maximum dans la ville (= sous forme de business) : le concessionnaire achète les véhicules à un tarif fixé dans le script ; il peut les revendre au prix qu'il le souhaite.
 
-SYSTÈME DE JOBS :
+## SYSTÈME DE JOBS :
 Fermier
 
 -- GÉNÉRAL : Créer un système de caisses pour les jobs ayant un leader.
 
 -- TAXI : Permettre au gouvernement de /vendrelicencetaxi. L'argent rentre dans la caisse de la faction. Le montant de la licence doit pouvoir être dynamique (gestion par le leader)
 
-SYSTÈME DE VÊTEMENTS :
+## SYSTÈME DE VÊTEMENTS :
 
-SYSTÈME DE TÉLÉPHONE :
+## SYSTÈME DE TÉLÉPHONE :
 
-SYSTÈME DE FACTIONS LÉGALES :
+## SYSTÈME DE FACTIONS LÉGALES :
 Toutes les factions légales peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse faction légale), affecter des véhicules à l'entreprise, changer le skin en fonction du rang. Toutes les amendes iront dans la caisse de la mairie.
 
--- MAIRIE :
+### MAIRIE :
 
--- LSPD (POSTE 1) et (POSTE 2) - comme sur CMLV, 2 postes séparés : 
+### LSPD :
 
-Commandes : 
+(POSTE 1) et (POSTE 2) - comme sur CMLV, 2 postes séparés : 
 
-/jmembres : Affiche le Prénom, le nom, le nom du rang et le message lié à /occupation.
+#### LISTE DES COMMANDES : 
 
-/skin : Permet de mettre son skin si l'on est en /duty.
+|  Commande |  Retour | Commentaires |
+| ------------ | ------------ | ------------ |
+| /jmembres  | Affiche le Prénom, le nom, le nom du rang et le message lié à /occupation.  | |
+|  /skin | Permet de mettre son skin principal si l'on est en /duty.  | |
+| /amendej  [ID/PartieDuNom/NumeroInconnu] [prix] [motif] |  Permet de mettre une amende à un joueur. Il est possible pour le joueur de ne pas payer immédiatement. | Log LSPD | 
+| /retirerpermis [ID/PartieDuNom/NumeroInconnu] [type de permis]  [motif]  | Permet de retirer le permis d'un joueur.  | Log LSPD
+| /r  | Radio LSPD interne.  | Log LSPD |
+|   |   | |
+|   |   | |
+|   |   | |
+|   |   | |
+|   |   | |
+|   |   | |
 
-/amendej [ID/PartieDuNom/NumeroInconnu] [prix] [motif] : Permet de mettre une amende à un joueur. Il est possible pour 
-le joueur de ne pas payer immédiatement. - Log LSPD
-
-/retirerpermis [ID/PartieDuNom/NumeroInconnu] [motif] : Permet de retirer le permis d'un joueur. - Log LSPD
 
 /r : Radio LSPD interne. - Log LSPD
 

@@ -7,8 +7,6 @@ https://forum.gta-chronicles.com/index.php?forums/dev-features/
 
 Liste des jobs actuels : Fermier, camionneur, mécanicien, taxi, vendeur d'armes, fournisseur d'armes.
 
-Liste des factions actuelles : police, journaliste, médecin, gouvernement, gang, sheriff, prison.
-
 --- TRADUCTIONS À RÉALISER :
 
 roleplay.pwn : Cicero
@@ -74,6 +72,7 @@ Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau/avion)
 2 concessionnaires maximum dans la ville (= sous forme de business) : le concessionnaire achète les véhicules à un tarif fixé dans le script ; il peut les revendre au prix qu'il le souhaite.
 
 SYSTÈME DE JOBS :
+Fermier
 
 -- GÉNÉRAL : Créer un système de caisses pour les jobs ayant un leader.
 
@@ -86,7 +85,7 @@ SYSTÈME DE TÉLÉPHONE :
 SYSTÈME DE FACTIONS LÉGALES :
 Toutes les factions légales peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse faction légale), affecter des véhicules à l'entreprise, changer le skin en fonction du rang. Toutes les amendes iront dans la caisse de la mairie.
 
--- GOUVERNEMENT : Créer /vendre
+-- GOUVERNEMENT :
 
 -- LSPD : 
 Commandes : 
@@ -103,8 +102,6 @@ Commandes :
 /listeherses : Liste toutes les herses avec leurs IDs.
 /jgov [message] : Affiche un message à tous les joueurs sur le serveur.
 
-
-
  /tow, /occupants
 /forcer, /b, /bc, /jfreq, /megaphone, /juger, /dp, /vehiculedesc, /traceur
 /detruire, /meec (/miseecoute), /bdd, /occupation
@@ -112,6 +109,16 @@ Commandes :
 /affaires, /enquete, /classerenquete, /checkbalistique, /barrage, /retirerbarrage, /armurerie
 /listegav, /wanted, /checkwanted, /retirerwanted, /prendregilet, /chargeur, /donut
  /noflash, /micro
+
+ -- LSFD :
+
+ -- LSSD :
+
+ -- FBI :
+
+ -- BUREAU DU PROCUREUR :
+
+ -- COUR DE JUSTICE :
 
 SYSTÈME DE FACTIONS ILLÉGALES :
 

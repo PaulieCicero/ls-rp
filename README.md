@@ -3,6 +3,9 @@ https://forum.gta-chronicles.com/index.php?forums/dev-features/
 
 # GAMEMODE :
 
+**Éléments généraux** :
+2 personnages maximum par compte.
+
 ## **SYSTÈME D'INTRODUCTION AU SERVEUR :**
 
 Reproduire l'introduction du jeu solo :
@@ -16,11 +19,11 @@ Reproduire l'introduction du jeu solo :
 
 https://nsa40.casimages.com/img/2019/03/21/190321070033239051.png
 
-Les panneaux publicitaires sont gérés par les journalistes de la Ville.
+Les panneaux publicitaires sont gérés par les journalistes de la Ville. Ils doivent être en nombre limité (entre 4 ou 6). Chaque publicité a une durée de 48 heures.
 
 Chaque panneau publicitaire est identifié par son ID.
 
-Chaque publicité est retransmise sur un channel Discord.
+Chaque publicité est retransmise chaque heure sur un channel Discord.
 
 ## **SYSTÈME DE PAYDAY :**
 
@@ -28,6 +31,13 @@ Chaque publicité est retransmise sur un channel Discord.
 
 **Éléments généraux :**
 Les ATMs doivent être suffisamment nombreux en Ville et doivent être placés à des endroits stratégiques. Ils disposent d'une quantité limitée d'argent et sont réapprovisionnés par l'entreprise "banque". Dès lors qu'un ATM dispose d'une somme inférieure à 5,000$, une notification est envoyée au leader (LOG LEADER BANQUE) - par le biais de l'UCP ?
+
+| Commande  |Description   | Commentaires  |
+| ------------ | ------------ | ------------ |
+| /atm consulter  |  Consulter le solde bancaire. |   |
+|  /atm retirer |  Retirer de l'argent.  | Maximum : xxxx$  |
+| /atm deposer  | Déposer de l'argent.  | Maximum : xxxx$  |
+|   |   |   |
 
 ## **SYSTÈME DE BANQUE :**
 
@@ -41,9 +51,32 @@ Les ATMs doivent être suffisamment nombreux en Ville et doivent être placés �
 
 ## **SYSTÈME DE PERMIS DE CONDUIRE (AUTO, AVION) :**
 
-## **SYSTÈME DE MAISON :**
+## **SYSTÈME DE PROPRIÉTÉS :**
 
-Chaque joueur peut disposer de 2 maisons.
+**Éléments généraux :** 
+Chaque joueur peut disposer de 2 propriétés.
+
+| Commande  | Description  |  Commentaires |
+| ------------ | ------------ | ------------ |
+| /propriete liste  |  Liste l'ensemble des propriétés + leur ID. |   |
+| /propriete acheter  | Acheter une maison.  |   |
+| /propriete mettrelocation [ID de la propriété] [prix] |  Mettre en location sa propriété en fonction de son ID avec un montant fixé. |  Cette commande peut aussi être utilisée pour changer le prix de la location. |
+| /propriete louer  | Louer une propriété.  |   |
+|  /propriete vendre [ID de la propriété] [prix] | Mettre sa propriété en vente en fonction de son ID avec un montant fixé.  |   |
+| /propriete expulser [ID de la propriété] |  Expulser un locataire de sa propriété. |  Le joueur peut être connecté ou pas. |
+| /propriete habiter [ID de la propriété] | Changer de spawn.  | Il n'est possible d'habiter dans la propriété que si elle n'est pas louée.  |
+|  /propriete consulter [ID de la propriété] | Consulter l'inventaire de la propriété.  | N'est possible que pour les propriétés non louées. |
+|  /propriete arme deposer | Déposer une arme dans l'inventaire maison.  |  N'est possible que lorsque le joueur est dans la propriété et qu'elle n'est pas louée. |
+|  /propriete arme retirer |  Retirer une arme de l'inventaire maison. | N'est possible que lorsque le joueur est dans la propriété et qu'elle n'est pas louée  |
+|  /propriete drogue deposer [type de drogue] [quantité] | Déposer de la drogue dans l'inventaire maison.  |  N'est possible que lorsque le joueur est dans la propriété et qu'elle n'est pas louée. |
+|  /propriete drogue deposer [type de drogue] [quantité] | Déposer de la drogue dans l'inventaire maison.  |  N'est possible que lorsque le joueur est dans la propriété et qu'elle n'est pas louée. |
+|  /propriete mobilier |   |   |
+|  /propriete sonner | Sonner depuis l'extérieur.  |   |
+|  /propriete arme deposer |   |   |
+
+/pdo, /visiter");
+/furniture, /expulserinvite, /quitterhouse, /deposernourriture, /manger, /verifporte");
+HOUSE: {FFFFFF}/housecontrebande");
 
 ## SYSTÈME D'ARMES :
 
@@ -206,9 +239,24 @@ Il existe deux types de poubelles : les poubelles publiques et les poubelles pri
 + Pack véhicules : Permet d'acheter 2 véhicules supplémentaires (voiture/moto/bateau/avion).
 + Pack maison : Permet d'acheter 1 maison supplémentaire.
 + Pack skin : Permet d'acheter 1 skin personnalisé.
++ Pack personnage : Permet de disposer d'un personnage complémentaire sur le compte.
 
 ## SYSTÈME D'ADMINISTRATION :
 
+**Éléments généraux** : L'équipe doit pouvoir être autonome un maximum.
+4 niveaux : Modérateur (1), Administrateur 1 (2), Administrateur 2 (3), Lead administrateur (4)
+
+|  Commande | Description  | Commentaires  | Niveau min |   |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| /supprimerpanneaupub  [ID du panneau]  | Permet de supprimer une publicité sur un panneau publicitaire.  |   |  | |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 
 
 # MAPPINGS : 

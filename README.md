@@ -76,9 +76,23 @@ Fermier
 
 ## SYSTÈME DE FACTIONS LÉGALES :
 
-**Éléments généraux :** Toutes les factions légales peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse faction légale), affecter des véhicules à l'entreprise, changer le skin en fonction du rang. Toutes les amendes iront dans la caisse de la mairie.
+**Éléments généraux :** 
 
-**Liste des factions : LSCH, LSPD, LSFD, LSSD, FBI, DOJ**
+|  Commande |  Retour | Commentaires |
+| ------------ | ------------ | ------------ |
+| /frecruter [ID/PartieDuNom/NumeroInconnu] | Inviter un joueur dans la faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX |
+|  /fvirer [ID/PartieDuNom/NumeroInconnu] | Exclure un joueur de la faction.  |   Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX |
+| /fchangerrang [ID/PartieDuNom/NumeroInconnu]  |  Changer le rang d'un joueur. |  10 rangs. / Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX |
+| /fchangernomrang [ID] | Changer le nom d'un rang de la faction.  | ID 1 = Rang 1 et ID 10 = Rang 10 / Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+|  /fvoircaisse |  Voir le montant disponible dans la caisse faction. | Accessible au R10/R9/R8.  |
+| /fretirercaisse [Montant] | Retirer un montant de la caisse faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+| /fdeposercaisse [Montant] | Déposer un montant dans la caisse faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+|  /fsalaire [ID du rang] [Montant] | Fixer le salaire par payday pour les joueurs en service.  | Accessible au R10/R9/R8. / Déduire les salaires de la caisse faction / Log LEADERS_LÉGAUX  |
+|  /fvehicule | Affecter le véhicule dans lequel se trouve le joueur à la faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+| /fretraitvehicule  | Désaffecter le véhicule de la faction dans lequel se trouve le joueur et le mettre propriétaire.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+| /fchangerskin [ID du rang] [ID du skin] | Changer le skin en fonction du rang lorsque les joueurs sont en service.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+
+**Liste des factions :** LSCH, LSPD, LSFD, LSSD, FBI, DOJ
 
 ### Los Santos City Hall (Mairie) :
 

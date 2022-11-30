@@ -45,6 +45,20 @@ SYSTÈME DE MAISON :
 
 SYSTÈME D'ENTREPRISES :
 
+Toutes les entreprises peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse job), affecter des véhicules à l'entreprise.
+
+Liste des entreprises : 24/7, armurerie, station-essence, concessionnaire, banque, taxi, location de voitures/motos, location de bateaux, location d'avions, mécanicien, camionneur, éboueur, presse.
+
+--- SYSTÈME DE VENTE :
+Toutes les entreprises ayant un système de vente (24/7, armurerie, etc.) peuvent :
+- Soit acheter un "actor" afin que l'entreprise tourne 24h/24 (définir un mode de financement)
+- Soit recruter un joueur afin de jouer le rp vendeur (définir des avantages par rapport à l'actor)
+
+--- STATION-ESSENCE :
+L'essence doit être transporté par un camionneur jusqu'à la station essence.
+L'essence est acheté à prix fixe par l'entreprise.
+L'entreprise peut fixer un prix de vente.
+
 SYSTÈME D'ARMES :
 
 -- DÉGATS DES ARMES :

@@ -5,8 +5,6 @@ https://forum.gta-chronicles.com/index.php?forums/dev-features/
 
 --- INFORMATIONS :
 
-Liste des jobs actuels : Fermier, camionneur, mécanicien, taxi, vendeur d'armes, fournisseur d'armes.
-
 --- TRADUCTIONS À RÉALISER :
 
 roleplay.pwn : Cicero
@@ -85,9 +83,9 @@ SYSTÈME DE TÉLÉPHONE :
 SYSTÈME DE FACTIONS LÉGALES :
 Toutes les factions légales peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse faction légale), affecter des véhicules à l'entreprise, changer le skin en fonction du rang. Toutes les amendes iront dans la caisse de la mairie.
 
--- GOUVERNEMENT :
+-- MAIRIE :
 
--- LSPD : 
+-- LSPD (POSTE 1) et (POSTE 2) - comme sur CMLV, 2 postes séparés : 
 Commandes : 
 /jmembres : Affiche le Prénom, le nom, le nom du rang et le message lié à /occupation.
 /skin : Permet de mettre son skin si l'on est en /duty.

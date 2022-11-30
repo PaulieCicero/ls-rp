@@ -61,6 +61,8 @@ Les ATMs doivent être suffisamment nombreux en Ville et doivent être placés �
 
 **Éléments généraux** :
 
+La banque a un rôle central dans l'économie du serveur.
+
 La caisse de la banque est alimentée par les dépôts de fonds des joueurs. Avec cet argent, la banque peut réaliser des prêts avec intérêts auprès de joueurs.
 
 Pour limiter la banque route, elle doit disposer d'une réserve de 70%.
@@ -320,4 +322,6 @@ Liste des lieux :
 # UCP :
 
 Avoir un MDC pour les forces de l'ordre.
+Possibilité de rename.
+Accéder aux logs en fonction de sa faction(ou entreprise) / son rang (faction et/ou leader)
 

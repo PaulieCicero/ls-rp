@@ -20,12 +20,15 @@ Reproduire l'introduction du jeu solo :
 | Commande  | Description  | Commentaire  |
 | ------------ | ------------ | ------------ |
 | /aide  | /propriete aide ; /voiture aide ; /entreprise aide ; /factionl aide ; /factioni aide ; /banque aide ; /job aide ; /telephone aide ; /garage aide  |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| /propriete aide  |   |   |
+|  /voiture aide |   |   |
+|  /entreprise aide |   |   |
+| /factionl aide  |   |   |
+| /factioni aide  |   |   |
+| /banque aide  |   |   |
+| /job aide  |   |   |
+|  /telephone aide |   |   |
+| /garage aide  |   |   |
 |   |   |   |
 |   |   |   |
 
@@ -55,6 +58,17 @@ Les ATMs doivent être suffisamment nombreux en Ville et doivent être placés �
 |   |   |   |
 
 ## **SYSTÈME DE BANQUE :**
+
+**Éléments généraux** :
+
+La caisse de la banque est alimentée par les dépôts de fonds des joueurs. Avec cet argent, la banque peut réaliser des prêts avec intérêts auprès de joueurs.
+
+Pour limiter la banque route, elle doit disposer d'une réserve de 70%.
+
+Par exemple :
+Les fonds sont de 100,000$.
+La banque ne peut que prêter 30,000$.
+En prêtant 30,000$ à 5% d'intérêts sur 1 mois, la banque réalisera un profit de 6,000$ (1500$ d'intérêts par semaine).
 
 ## **SYSTÈME D'INVENTAIRE :**
 

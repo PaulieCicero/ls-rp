@@ -5,7 +5,12 @@ https://forum.gta-chronicles.com/index.php?forums/dev-features/
 
 ## **SYSTÈME D'INTRODUCTION AU SERVEUR :**
 
-Revoir l'introduction lors de l'arrivée d'un nouveau joueur + tutoriel.
+Reproduire l'introduction du jeu solo :
+1. Spawn dans un avion
+2. Caméra extérieure de l'avion qui se pose à LS
+3. Spawn à l'aéroport (intérieur)
+4. Emmener le joueur vers la sortie de l'aéroport
+5. Visite des principaux lieux de la Ville avec un bot taxi (obligatoire)
 
 ## **SYSTÈME DE PANNEAUX PUBLICITAIRES :**
 
@@ -14,6 +19,8 @@ https://nsa40.casimages.com/img/2019/03/21/190321070033239051.png
 Les panneaux publicitaires sont gérés par les journalistes de la Ville.
 
 Chaque panneau publicitaire est identifié par son ID.
+
+Chaque publicité est retransmise sur un channel Discord.
 
 ## **SYSTÈME DE PAYDAY :**
 
@@ -53,9 +60,26 @@ Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau/avion)
 
 ## **SYSTÈME D'ENTREPRISES :**
 
-Toutes les entreprises peuvent recruter, licencier, changer de rang, changer le nom des rangs (Nombre de rangs : 10), disposer d'une caisse job, fixer le salaire par payday (déduit de la caisse job), affecter des véhicules à l'entreprise, changer le skin en fonction du rang.
+**Éléments généraux :**
+Les entreprises fonctionnent sur le modèle traditionnel des factions légales.
 
-Liste des entreprises : 24/7 (1), armurerie, station-essence (3), concessionnaire, banque, taxi, location de voitures/motos, location de bateaux, location d'avions, mécanicien, camionneur, éboueur, presse.
+**Liste des commandes :**
+
+|  Commande |  Retour | Commentaires |
+| ------------ | ------------ | ------------ |
+| /entreprise recruter [ID/PartieDuNom/NumeroInconnu] | Inviter un joueur dans l'entreprise.  | Accessible au R10/R9/R8. / Log LEADERS_ENTREPRISES |
+|  /entreprise virer [ID/PartieDuNom/NumeroInconnu] | Exclure un joueur de l'entreprise.  |   Accessible au R10/R9/R8. / Log LEADERS_ENTREPRISES |
+| /entreprise changerrang [ID/PartieDuNom/NumeroInconnu]  |  Changer le rang d'un joueur. |  10 rangs. / Accessible au R10/R9/R8. / Log LEADERS_ENTREPRISES |
+| /entreprise changernomrang [ID] | Changer le nom d'un rang de l'entreprise.  | ID 1 = Rang 1 et ID 10 = Rang 10 / Accessible au R10/R9/R8. / Log LEADERS_ENTREPRISES  |
+|  /entreprise voircaisse |  Voir le montant disponible dans la caisse entreprise. | Accessible au R10/R9/R8.  |
+| /entreprise retirercaisse [Montant] | Retirer un montant de la caisse entreprise.  | Accessible au R10/R9/R8. / Log LEADERS_ENTREPRISES  |
+| /entreprise deposercaisse [Montant] | Déposer un montant dans la caisse entreprise.  | Accessible au R10/R9/R8. / Log LEADERS_ENTREPRISES  |
+|  /entreprise salaire [ID du rang] [Montant] | Fixer le salaire par payday pour les joueurs en service. | Accessible au R10/R9/R8. / Déduire les salaires de la caisse faction / Log LEADERS_ENTREPRISES  |
+|  /entreprise vehicule | Affecter le véhicule dans lequel se trouve le joueur à l'entreprise.  | Accessible au R10/R9/R8. / Log LEADERS_ENTREPRISES  |
+| /entreprise retraitvehicule  | Désaffecter le véhicule de l'entreprise dans lequel se trouve le joueur et le mettre propriétaire.  | Accessible au R10/R9/R8. / Log LEADERS_ENTREPRISES  |
+| /entreprise changerskin [ID du rang] [ID du skin] | Changer le skin en fonction du rang lorsque les joueurs sont en service.  | Accessible au R10/R9/R8. / Log LEADERS_ENTREPRISES  |
+
+**Liste des entreprises :** 24/7, armurerie, station-essence, concessionnaire, banque, taxi, location de voitures/motos, location de bateaux, location d'avions, mécanicien, camionneur, éboueur, presse.
 
 - ### SYSTÈME DE VENTE :
 
@@ -91,17 +115,17 @@ Il existe deux types de jobs.
 
 |  Commande |  Retour | Commentaires |
 | ------------ | ------------ | ------------ |
-| /frecruter [ID/PartieDuNom/NumeroInconnu] | Inviter un joueur dans la faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX |
-|  /fvirer [ID/PartieDuNom/NumeroInconnu] | Exclure un joueur de la faction.  |   Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX |
-| /fchangerrang [ID/PartieDuNom/NumeroInconnu]  |  Changer le rang d'un joueur. |  10 rangs. / Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX |
-| /fchangernomrang [ID] | Changer le nom d'un rang de la faction.  | ID 1 = Rang 1 et ID 10 = Rang 10 / Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
-|  /fvoircaisse |  Voir le montant disponible dans la caisse faction. | Accessible au R10/R9/R8.  |
-| /fretirercaisse [Montant] | Retirer un montant de la caisse faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
-| /fdeposercaisse [Montant] | Déposer un montant dans la caisse faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
-|  /fsalaire [ID du rang] [Montant] | Fixer le salaire par payday pour les joueurs en service.  | Accessible au R10/R9/R8. / Déduire les salaires de la caisse faction / Log LEADERS_LÉGAUX  |
-|  /fvehicule | Affecter le véhicule dans lequel se trouve le joueur à la faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
-| /fretraitvehicule  | Désaffecter le véhicule de la faction dans lequel se trouve le joueur et le mettre propriétaire.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
-| /fchangerskin [ID du rang] [ID du skin] | Changer le skin en fonction du rang lorsque les joueurs sont en service.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+| /factionl recruter [ID/PartieDuNom/NumeroInconnu] | Inviter un joueur dans la faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX |
+|  /factionl virer [ID/PartieDuNom/NumeroInconnu] | Exclure un joueur de la faction.  |   Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX |
+| /factionl changerrang [ID/PartieDuNom/NumeroInconnu]  |  Changer le rang d'un joueur. |  10 rangs. / Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX |
+| /factionl changernomrang [ID] | Changer le nom d'un rang de la faction.  | ID 1 = Rang 1 et ID 10 = Rang 10 / Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+|  /factionl voircaisse |  Voir le montant disponible dans la caisse faction. | Accessible au R10/R9/R8.  |
+| /factionl retirercaisse [Montant] | Retirer un montant de la caisse faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+| /factionl deposercaisse [Montant] | Déposer un montant dans la caisse faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+|  /factionl salaire [ID du rang] [Montant] | Fixer le salaire par payday pour les joueurs en service.  | Accessible au R10/R9/R8. / Déduire les salaires de la caisse faction / Log LEADERS_LÉGAUX  |
+|  /factionl vehicule | Affecter le véhicule dans lequel se trouve le joueur à la faction.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+| /factionl retraitvehicule  | Désaffecter le véhicule de la faction dans lequel se trouve le joueur et le mettre propriétaire.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
+| /factionl changerskin [ID du rang] [ID du skin] | Changer le skin en fonction du rang lorsque les joueurs sont en service.  | Accessible au R10/R9/R8. / Log LEADERS_LÉGAUX  |
 
 **Liste des factions :** LSCH, LSPD, LSFD, LSSD, FBI, DOJ
 
@@ -169,7 +193,6 @@ Il existe deux types de poubelles : les poubelles publiques et les poubelles pri
 - Poubelles publiques : Les poubelles publiques sont installées dans l'ensemble de la Ville. Le ramassage d'une poubelle publique (uniquement si elle est remplie à plus de xxxxx %) coûte xxxx $ à la caisse mairie.
 - Poubelles privées : Chaque maison et commerce dispose d'une poubelle. Le ramassage d'une poubelle privée (uniquement si elle est remplie à plus de xxxxx %) coûte xxxx $ au propriétaire (retiré sur son compte en banque).
 
-
 ## SYSTÈME DE BRAQUAGES :
 
 ## SYSTÈME DE GARAGES :
@@ -184,11 +207,38 @@ Il existe deux types de poubelles : les poubelles publiques et les poubelles pri
 + Pack maison : Permet d'acheter 1 maison supplémentaire.
 + Pack skin : Permet d'acheter 1 skin personnalisé.
 
+## SYSTÈME D'ADMINISTRATION :
+
+
+
 # MAPPINGS : 
 
 Liste des lieux :
 
 # ÉCONOMIE GLOBALE :
+
+## ENTREPRISES :
+
+**ÉQUILIBRE GLOBAL DU NOMBRE D'ENTREPRISES**
+
+**Éléments généraux :**
+
+|  Type | Nombre  |  Lieux |  Commentaires |
+| ------------ | ------------ | ------------ | ------------ |
+| 24/7  | 4  |   |   |
+|  Armurerie | 2  |   |   |
+| Station-essence  | 2  |   |   |
+| Concessionnaire  | 2  |   |   |
+| Banque  |  2 |   |   |
+| Taxi  |  2 |   |   |
+| Location de voitures/motos  |  2 |   |   |
+|  Location de bateaux | 2  |   |   |
+| Location d'avions  | 2  |   |   |
+|  Mécanicien |  2 |   |   |
+|  Camionneur |  2 |   |   |
+|  Éboueur | 2  |   |   |
+| Presse  | 2  |   |   |
+|   |   |   |   |
 
 # UCP :
 

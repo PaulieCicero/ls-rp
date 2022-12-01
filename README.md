@@ -19,18 +19,22 @@ Reproduire l'introduction du jeu solo :
 
 | Commande  | Description  | Commentaire  |
 | ------------ | ------------ | ------------ |
-| /aide  | /propriete aide ; /voiture aide ; /entreprise aide ; /factionl aide ; /factioni aide ; /banque aide ; /job aide ; /telephone aide ; /garage aide ; /drogue aide ; /arme aide  |   |
-| /propriete aide  |   |   |
-|  /voiture aide |   |   |
-|  /entreprise aide |   |   |
-| /factionl aide  |   |   |
-| /factioni aide  |   |   |
-| /banque aide  |   |   |
-| /job aide  |   |   |
-|  /telephone aide |   |   |
-| /garage aide  |   |   |
-| /drogue aide  |   |   |
-| /arme drogue  |   |   |
+| /aide  | /aide (propriete ; voiture ; entreprise ; factionl ; factioni ; banque ; job ; telephone ; garage ; drogue ; arme) - /pm - /rapport - /question - /votekick  |   |
+| /aide propriete  |   |   |
+|  /aide voiture |   |   |
+|  /aide entreprise |   |   |
+| /aide factionl |   |   |
+| /aide factioni |   |   |
+| /aide banque |   |   |
+| /aide job |   |   |
+|  /aide telephone |   |   |
+| /aide garage |   |   |
+| /aide drogue |   |   |
+| /aide arme |   |   |
+| /pm  |   |   |
+|  /rapport |   |   |
+| /question  |   |   |
+| /votekick  |   |   |
 |   |   |   |
 
 
@@ -111,7 +115,9 @@ Permettre un raccourci de chaque commande avec "/prop".
 |  /propriete drogue deposer [type de drogue] [quantité] | Déposer de la drogue dans l'inventaire maison.  |  N'est possible que lorsque le joueur est dans la propriété et qu'elle n'est pas louée. |
 |  /propriete mobilier |   |   |
 |  /propriete sonner | Sonner depuis l'extérieur.  |   |
-|  /propriete arme deposer |   |   |
+|  /propriete achatalarme [type] | Acheter une alarme de protection pour sa maison.  |   |
+|  /propriete achatcamera [type(intérieur/extérieur)] | Acheter une caméra permettant d'accéder en live à la visualisation.  |   |
+|  /propriete visionnercamera [type(intérieur/extérieur)] | Acheter une caméra permettant d'accéder en live à la visualisation.  |   |
 
 /pdo, /visiter");
 /furniture, /expulserinvite, /quitterhouse, /deposernourriture, /manger, /verifporte");
@@ -168,8 +174,14 @@ Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau/avion)
 
 |  Commande | Description  | Commentaires  |
 | ------------ | ------------ | ------------ |
-| /v  |   |   |
-|   |   |   |
+| /v clef  | Allumer/éteindre le moteur du véhicule.  |   |
+| /v listeclef | Lister les clés que le joueur dispose (les siennes ou celles qu'il a reçues).  |   |
+|  /v donnercle [ID du joueur] [ID de la clé] | Donner une clé à un joueur.  |   |
+|  /v lock | Ouvrir/fermer un véhicule.  |   |
+|  /v garer |   |   |
+| /v coffre  | Accéder au coffre du véhicule.  | N'est possible que si le coffre est ouvert.  |
+| /v coffrelock  | Ouvrir/fermer le coffre du véhicule.  |   |
+|  /v fenetre | Ouvrir/fermer les fenêtres du véhicule.  |   |
 |   |   |   |
 |   |   |   |
 |   |   |   |
@@ -179,8 +191,8 @@ Un joueur peut disposer de 3 véhicules au maximum (voiture/moto/bateau/avion)
 |   |   |   |
 
 
-			SendClientMessage(playerid, COLOR_USAGE, "Choix possibles: clef, lock, garer, coffre, coffrelock, capot, fenetre, carburant, compteur");
-			SendClientMessage(playerid, COLOR_USAGE, "Choix possibles: spawn, preview, acheter, vendre, listeclefs, donnerclef, location, finlocation");
+			SendClientMessage(playerid, COLOR_USAGE, "Choix possibles:      carburant, compteur");
+			SendClientMessage(playerid, COLOR_USAGE, "Choix possibles: spawn, preview, acheter, vendre, , location, finlocation");
 			SendClientMessage(playerid, COLOR_USAGE, "Choix possibles: do, analyser, couleurs, consulteramende, autoradio, localiser");
 			SendClientMessage(playerid, COLOR_USAGE, "Choix possibles: checkdrug, mettredrug, prendredrug, changerplaque");
 			return SendClientMessage(playerid, COLOR_USAGE, "Choix possibles: weaponkit, rangerkit, prendrekit");
